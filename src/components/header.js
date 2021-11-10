@@ -9,9 +9,9 @@ class Header extends React.Component {
     return (
             <div>
                 <h3 className="beginning">Welcome, my name is <span className="name">Scott Cardinali</span>. <br/>
-                                            Full Stack Web Developer<br/>
+                                            Test Automation Engineer<br/>
                                             &amp;<br/>
-                                            Broadcast Systems Professional.</h3>
+                                            Full Stack Web Developer.</h3>
             </div>
     )
   }
