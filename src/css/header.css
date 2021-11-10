@@ -4,10 +4,21 @@
     text-align: center;
     background:#111;
     color: #999;
-    padding-top: 10rem;
+    padding-top: 3rem;
     margin-top: .5rem;
 }
 
 .name {
     color: coral;
+}
+
+.summary {
+    /* position: relative; */
+    text-align: center;
+    background:#111;
+    color: #999;
+    padding-top: 2rem;
+    margin-top: .5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }

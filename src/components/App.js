@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './header';
-// import Spinner from './spinner';
+import Spinner from './spinner';
 import Links from './links';
 import '../css/app.css';
 
@@ -16,6 +16,7 @@ class App extends React.Component {
 
       return (
         <div>
+            <Spinner />
             <Header />
             <Links />
         </div>
