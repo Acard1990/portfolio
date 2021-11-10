@@ -12,6 +12,8 @@ class Header extends React.Component {
                                             Test Automation Engineer<br/>
                                             &amp;<br/>
                                             Full Stack Web Developer.</h3>
+                                            <br/>
+                <h4 className="beginning">Oh, btw... I freaking love testing software applications.</h4>
             </div>
     )
   }
