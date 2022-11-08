@@ -1,7 +1,7 @@
 
 /* Selector bar with links  */
 .bar {
-  background: #C44D33;
+  background: transparent;
   color: #999;
   width: 100%;
   align-content: center;
@@ -9,20 +9,21 @@
   padding-left: 0px;
   margin-bottom: 0;
   display: flex;
+  height: 100%;
 }
 
 .chunk {
   padding-top: 2.5rem;
   padding-left: 0px;
-  background:#222;
-  width: 18%;
+  background: transparent;
+  width: 33.3%;
   /* height: 10%; */
 }
 
 .chunk:hover {
-  transform: translate(5%, -10%);
+  transform: translate(5%, -5%);
   transition: all .3s linear;
-  color: #C44D33;
+  color: transparent;
 }
 
 a {

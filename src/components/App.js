@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from './header';
-import Spinner from './spinner';
+import { Routes } from 'react-router-dom';
 import Links from './links';
 import '../css/app.css';
-
+import AboutMe from './AboutMe';
+import TopBar from './TopBar';
 
 class App extends React.Component {
 
@@ -16,9 +17,11 @@ class App extends React.Component {
 
       return (
         <div>
-            <Spinner />
-            <Header />
-            <Links />
+        <div class="fakeScreen">
+          <TopBar />
+          <Header />
+        </div>
+        <Links />
         </div>
       );
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/header.css';
+import '../css/app.css';
 
 class Header extends React.Component {
 
@@ -7,19 +7,12 @@ class Header extends React.Component {
   render() {
 
     return (
-            <div>
-                <h3 className="beginning">Welcome, my name is <span className="name">Scott Cardinali</span>. <br/>
-                                            Test Automation Engineer 3<br/>
-                                            ||<br/>
-                                            SDET 3.<br/>
-                                            ||<br/>
-                                            Quality Engineer 3</h3>
-                                            <br/>
-                <p className="summary">I am a former Broadcast Professional with experience in Operations and Engineering. 
-                Broadcast Engineering exposed me to some basic scripts which eventually piqued my curiosity and led me to attend the Full Stack Web Development Boot Camp at Georgia Tech. 
-                That boot camp along with my never ending obsession to learn new things has led me to become a level 3 SDET thats contributed to test automation within both 
-                the SaasOps and Fintech industries. During my time in Quality Engineering, I've pushed the use of new frameworks and practices to help evolve the organizations.</p>
-            </div>
+      <div class="fakeScreen">
+      <p class="p line1">Welcome,<span class="cursor1">_</span></p>
+      <p class="p line2">My name is Scott Cardinali,<span class="cursor2">_</span></p>
+      <p class="p line3">and I'm a level 3 SDET<span class="cursor3">_</span></p>
+      <p class="p line4"><span class="cursor4">{'>'}_</span></p>
+      </div>
     )
   }
 }

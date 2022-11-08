@@ -1,12 +1,9 @@
 
 body {
-    background: #111;
-    font-family: 'Ubuntu', sans-serif;
-    min-height: 95vh;
-    top: 0;
-    bottom: 0;
-    left: auto;
-    right: auto;
+    background: #ffd89b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -14,3 +11,197 @@ body {
         display: grid;
     }
 }
+
+.fakeScreen {
+    background-color: #151515;
+    box-sizing: border-box;
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .p {
+    margin-left: 1rem;
+    font-size: 1.25em;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  span {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .line1 {
+    color: coral;
+    -webkit-animation: type 2s 2s steps(30, end) forwards;
+    -moz-animation: type 2s 2s steps(30, end) forwards;
+    -o-animation: type 2s 2s steps(30, end) forwards;
+    animation: type 2s 2s steps(30, end) forwards;
+  }
+  
+  .cursor1 {
+    -webkit-animation: blink 2s 2s 2 forwards;
+    -moz-animation: blink 2s 2s 2 forwards;
+    -o-animation: blink 2s 2s 2 forwards;
+    animation: blink 2s 2s 2 forwards;
+  }
+  
+  .line2 {
+    color: coral;
+    -webkit-animation: type 2s 4.25s steps(30, end) forwards;
+    -moz-animation: type 2s 4.25s steps(30, end) forwards;
+    -o-animation: type 2s 4.25s steps(30, end) forwards;
+    animation: type 2s 4.25s steps(30, end) forwards;
+  }
+  
+  .cursor2 {
+    -webkit-animation: blink 2s 5.25s 2 forwards;
+    -moz-animation: blink 2s 5.25s 2 forwards;
+    -o-animation: blink 2s 5.25s 2 forwards;
+    animation: blink 2s 5.25s 2 forwards;
+  }
+  
+  .line3 {
+    color: coral;
+    -webkit-animation: type 2s 7.5s steps(30, end) forwards;
+    -moz-animation: type 2s 7.5s steps(30, end) forwards;
+    -o-animation: type 2s 7.5s steps(30, end) forwards;
+    animation: type 2s 7.5s steps(30, end) forwards;
+  }
+  
+  .cursor3 {
+    -webkit-animation: blink 2s 8.5s 2 forwards;
+    -moz-animation: blink 2s 8.5s 2 forwards;
+    -o-animation: blink 2s 8.5s 2 forwards;
+    animation: blink 2s 8.5s 2 forwards;
+  }
+  
+  .line4 {
+    color: #fff;
+    -webkit-animation: type .5s 10.75s steps(30, end) forwards;
+    -moz-animation: type .5s 10.75s steps(30, end) forwards;
+    -o-animation: type .5s 10.75s steps(30, end) forwards;
+    animation: type .5s 10.75s steps(30, end) forwards;
+  }
+  
+  .cursor4 {
+    -webkit-animation: blink 1s 11.5s infinite;
+    -moz-animation: blink 1s 8.5s infinite;
+    -o-animation: blink 1s 8.5s infinite;
+    animation: blink 1s 8.5s infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-o-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    to {
+      width: 100%;
+    }
+  }
+  
+  @-moz-keyframes type {
+    to {
+      width: 100%;
+    }
+  }
+  
+  @-o-keyframes type {
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes type {
+    to {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .fakeScreen {
+        background-color: #151515;
+        box-sizing: border-box;
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        padding: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+  }
