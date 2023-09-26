@@ -98,7 +98,7 @@ class ApiApp extends React.Component {
         const { newUser, users, isComponentVisible } = this.state;
         return (
             <div className="center-button">
-            <button onClick={this.toggleComponent}>
+            <button  className='button-70' onClick={this.toggleComponent}>
                 View User Management app
             </button>
             {isComponentVisible && (
@@ -121,15 +121,17 @@ class ApiApp extends React.Component {
                 <td>{user.lastName}</td>
                 <td>{user.email}</td>
                 <td>
-              <button onClick={() => this.handleDelete(user.id)}>Delete</button>
+              <button id='deleteBtn' onClick={() => this.handleDelete(user.id)}>Delete</button>
             </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div className="user-input">
-        <button onClick={this.generateRandomUUID}>Generate Random UUID</button>
+        <div>
+        <button className='button-70' onClick={this.generateRandomUUID}>Generate Random UUID</button>
           <input
+            id='firstNameInput'
+            className='input-70'
             type="text"
             name="firstName"
             placeholder="First Name"
@@ -137,6 +139,8 @@ class ApiApp extends React.Component {
             onChange={this.handleChange}
           />
           <input
+          id='lastNameInput'
+            className='input-70'
             type="text"
             name="lastName"
             placeholder="Last Name"
@@ -144,13 +148,15 @@ class ApiApp extends React.Component {
             onChange={this.handleChange}
           />
           <input
+            id='emailInput'
+            className='input-70'
             type="text"
             name="email"
             placeholder="Email Address"
             value={newUser.email}
             onChange={this.handleChange}
           />
-          <button onClick={this.handleSubmit}>Add User</button>
+          <button id='addUserBtn' className='button-70' onClick={this.handleSubmit}>Add User</button>
         </div>
         </div>
       )}
