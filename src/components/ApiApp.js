@@ -98,7 +98,7 @@ class ApiApp extends React.Component {
         const { newUser, users, isComponentVisible } = this.state;
         return (
             <div className="center-button">
-            <button  className='button-70' onClick={this.toggleComponent}>
+            <button  id='toggleBtn' className='button-70' onClick={this.toggleComponent}>
                 View User Management app
             </button>
             {isComponentVisible && (
@@ -128,7 +128,7 @@ class ApiApp extends React.Component {
           </tbody>
         </table>
         <div>
-        <button className='button-70' onClick={this.generateRandomUUID}>Generate Random UUID</button>
+        <button id='genRandomUUIDBtn' className='button-70' onClick={this.generateRandomUUID}>Generate Random UUID</button>
           <input
             id='firstNameInput'
             className='input-70'
