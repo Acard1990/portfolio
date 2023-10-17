@@ -1,9 +1,10 @@
 
 body {
-    background: #ffd89b;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    /* background: #ffd89b;  /* fallback for old browsers */
+/* background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  Chrome 10-25, Safari 5.1-6
+background: linear-gradient(to right, #19547b, #ffd89b); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-image: url('./10-7.png');
+background-size: cover;
 }
 
 @media only screen and (max-width: 750px) {
@@ -91,10 +92,10 @@ background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, F
   }
   
   .cursor4 {
-    -webkit-animation: blink 1s 11.5s infinite;
-    -moz-animation: blink 1s 8.5s infinite;
-    -o-animation: blink 1s 8.5s infinite;
-    animation: blink 1s 8.5s infinite;
+    -webkit-animation: blink 1s 8.5s 2 infinite;
+    -moz-animation: blink 1s 8.5s 2 infinite;
+    -o-animation: blink 1s 8.5s 2 infinite;
+    animation: blink 1s 8.5s 2 infinite;
   }
 
   .line5 {
@@ -106,10 +107,10 @@ background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, F
   }
   
   .cursor5 {
-    -webkit-animation: blink 1s 11.5s infinite;
+    -webkit-animation: blink 1s 8.5s infinite;
     -moz-animation: blink 1s 8.5s infinite;
     -o-animation: blink 1s 8.5s infinite;
-    animation: blink 1s 10.25s infinite;
+    animation: blink 1s 8.5s infinite;
   }
   
   @-webkit-keyframes blink {

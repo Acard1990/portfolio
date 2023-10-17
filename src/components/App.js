@@ -3,6 +3,7 @@ import Header from './header';
 import Links from './links';
 import '../css/app.css';
 import TopBar from './TopBar';
+import ApiApp from './ApiApp';
 
 
 
@@ -22,6 +23,7 @@ class App extends React.Component {
           <TopBar />
           <Header />
         </div>
+        <ApiApp/>
         <Links />
         </div>
       );

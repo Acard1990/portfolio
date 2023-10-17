@@ -11,8 +11,8 @@ class ApiApp extends React.Component {
           users: [],
           newUser: {
             id: '',
-            firstName: '',
-            lastName: '',
+            first_name: '',
+            last_name: '',
             email: '',
           },
           isComponentVisible: false,
@@ -24,7 +24,7 @@ class ApiApp extends React.Component {
       }
     
       fetchUsers() {
-        axios.get('http://localhost:8080/appUsers')
+        axios.get('https://python-users-crud-portfolio-be-2902900fe179.herokuapp.com/appUsers')  
           .then(response => {
             this.setState({ users: response.data });
           })
@@ -45,14 +45,21 @@ class ApiApp extends React.Component {
     
       handleSubmit = () => {
         const { newUser } = this.state;
-        axios.post('http://localhost:8080/appUsers', newUser)
+        const isEmailValid = this.validateEmail(newUser.email);
+      
+        if (!isEmailValid) {
+          alert('Invalid email address. Please enter a valid email.');
+          return;
+        }
+      
+        axios.post('https://python-users-crud-portfolio-be-2902900fe179.herokuapp.com/appUsers', newUser)
           .then(() => {
             this.fetchUsers();
             this.setState({
               newUser: {
                 id: '',
-                firstName: '',
-                lastName: '',
+                first_name: '',
+                last_name: '',
                 email: '',
               },
             });
@@ -63,7 +70,7 @@ class ApiApp extends React.Component {
       };
 
       handleDelete = (id) => {
-        axios.delete(`http://localhost:8080/appUsers/delete/${id}`)
+        axios.delete(`https://python-users-crud-portfolio-be-2902900fe179.herokuapp.com/appUsers/delete/${id}`)
           .then(() => {
             this.fetchUsers(); // Refresh the user list after deleting a user
           })
@@ -87,6 +94,11 @@ class ApiApp extends React.Component {
         }));
       };
 
+      validateEmail = (email) => {
+        const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+        return regex.test(email);
+      };
+
       toggleComponent = () => {
         console.log('Toggle button clicked');
         this.setState(prevState => ({
@@ -105,7 +117,6 @@ class ApiApp extends React.Component {
         <div>
             {/* <h5 className="app-title2">Note: This is for use with the javaSmallProj repo, please run locally before exploring</h5> */}
         <table className="user-grid">
-            <thead className="app-title2">Please pull and run the javaSmallProj before using</thead>
           <thead>
             <tr>
               <th>First Name</th>
@@ -117,8 +128,8 @@ class ApiApp extends React.Component {
           <tbody>
             {this.state.users.map(user => (
               <tr key={user.id}>
-                <td>{user.firstName}</td>
-                <td>{user.lastName}</td>
+                <td>{user.first_name}</td>
+                <td>{user.last_name}</td>
                 <td>{user.email}</td>
                 <td>
               <button id='deleteBtn' onClick={() => this.handleDelete(user.id)}>Delete</button>
@@ -128,28 +139,28 @@ class ApiApp extends React.Component {
           </tbody>
         </table>
         <div>
-        <button id='genRandomUUIDBtn' className='button-70' onClick={this.generateRandomUUID}>Generate Random UUID</button>
+        {/* <button id='genRandomUUIDBtn' className='button-70' onClick={this.generateRandomUUID}>Generate Random UUID</button> */}
           <input
             id='firstNameInput'
-            className='input-70'
+            className='button-70'
             type="text"
-            name="firstName"
+            name="first_name"
             placeholder="First Name"
-            value={newUser.firstName}
+            value={newUser.first_name}
             onChange={this.handleChange}
           />
           <input
           id='lastNameInput'
-            className='input-70'
+            className='button-70'
             type="text"
-            name="lastName"
+            name="last_name"
             placeholder="Last Name"
-            value={newUser.lastName}
+            value={newUser.last_name}
             onChange={this.handleChange}
           />
           <input
             id='emailInput'
-            className='input-70'
+            className='button-70'
             type="text"
             name="email"
             placeholder="Email Address"

@@ -35,7 +35,8 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 16px; 
-    background-color: rgba(0, 0, 0, 0.87);
+    background-image: linear-gradient(black, #0d70ea);
+
   }
   
   .user-grid th,
@@ -47,7 +48,6 @@
   }
   
   .user-grid th {
-    background-color: rgba(0, 0, 0, 0.87); /* Add a background color to table headers */
     color: white
   }
 
@@ -84,7 +84,7 @@
   }
 
 .button-70 {
-  background-image: linear-gradient(#0dccea, #0d70ea);
+  background-image: linear-gradient(black, #0d70ea);
   border: 0;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
